@@ -36,10 +36,8 @@ static int logfd = -1;
 }
 
 int module_start(SceSize args, void *argp){
-	#if DEBUG_LOG
 	sceIoRemove("ms0:/PSP/"MODULE_NAME".log");
 	sceIoRemove("ef0:/PSP/"MODULE_NAME".log");
-	#endif
 	LOG("module started");
 	LOG("test1 |%s %s %s %s %s %s %s %s %s %s %s %s| test1", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
 	LOG("test2 |%u %u %u %u %u %u %u %u %u %u %u %u| test2", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
